@@ -29,6 +29,7 @@ class CommentsController < ApplicationController
   def new
     @article = Article.find(params[:article_id])
     @comment = Comment.new(:article_id => @article.id)
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @comment }

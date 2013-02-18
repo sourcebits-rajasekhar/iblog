@@ -4,7 +4,9 @@ Iblog::Application.routes.draw do
   resources :articles do 
     resources :comments
   end
-
+  resources :session, only: [:new, :create]
+  match '/signin', to: 'session#new'
+  match '/signup', to: 'users#new'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
