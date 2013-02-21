@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
+  include SessionsHelper
   def index
      @article = Article.find(params[:article_id])
     @comments = @article.comments
@@ -57,7 +58,9 @@ class CommentsController < ApplicationController
   #   end
   # end
   def create
-    @comment = Comment.createCommentWithUserId(params)
+    @article = Article.find(params[:article_id])
+    @comment = @article.comments.build(params[:comment])
+    @comment.user_id=current_user.id
     respond_to do |format|
       if @comment.save
         format.html { redirect_to(@article, :notice => 'Comment was successfully created.') }

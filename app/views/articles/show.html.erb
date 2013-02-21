@@ -14,7 +14,8 @@
 <h2>Comments</h2>
 <%= render :partial => @article.comments %>
 <br />
-<h4> Add Comment </h4>
+<br />
+<h2> Add Comment </h2>
 <%= form_for([@article, @article.comments.build]) do |f| %>
 <div class="field">
     <%= f.label :body %><br />
@@ -22,7 +23,11 @@
 </div>
   <%if signed_in? %>
   <p><%= f.submit %></p>
+  <p><%= link_to "Sign Out",signout_path %>
   <% else %>
   <%=link_to "Sign In" , signin_path %>
   <%end %>
 <% end %>
+
+<br />
+<%=link_to "All Articles" , articles_path %>

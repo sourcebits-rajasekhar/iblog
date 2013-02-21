@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
-include SessionHelper
+include SessionsHelper
 
 def show
-
+   
 end
 
 def new
@@ -14,10 +14,10 @@ def create
    if @user.save
       sign_in @user
       flash[:success] = "Welcome to the iblog!"
-      redirect_to @user
-    else
+      redirect_to root_path
+   else
       render 'new'
-    end
+   end
 
 end
 
