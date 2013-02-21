@@ -57,8 +57,7 @@ class CommentsController < ApplicationController
   #   end
   # end
   def create
-  @article = Article.find(params[:article_id])
-    @comment = @article.comments.build(params[:comment])
+    @comment = Comment.createCommentWithUserId(params)
     respond_to do |format|
       if @comment.save
         format.html { redirect_to(@article, :notice => 'Comment was successfully created.') }

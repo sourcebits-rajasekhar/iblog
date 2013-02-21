@@ -4,6 +4,7 @@ Iblog::Application.routes.draw do
   resources :articles do 
     resources :comments
   end
+  resources :users
   resources :session, only: [:new, :create]
   match '/signin', to: 'session#new'
   match '/signup', to: 'users#new'
