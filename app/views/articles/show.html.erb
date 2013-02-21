@@ -1,19 +1,15 @@
 <p id="notice"><%= notice %></p>
-<h2> Article </h2>
 <p>
-  <b>Title:</b>
-  <%= @article.title %>
+  <h1><%= @article.title %></h1>
 </p>
 
 <p>
-  <b>Body:</b>
   <%= @article.body %>
 </p>
 
 
 <h2>Comments</h2>
 <%= render :partial => @article.comments %>
-<br />
 <br />
 <h2> Add Comment </h2>
 <%= form_for([@article, @article.comments.build]) do |f| %>

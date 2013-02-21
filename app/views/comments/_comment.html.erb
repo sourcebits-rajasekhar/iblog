@@ -1,11 +1,12 @@
   
+  <% user=User.find(comment.user_id) %>
   <p>
-  <b>UserID:</b>
-  <%= comment.user_id %>
+  <%= user.username %><br />
+  <%= image_tag("user1.png", :size => "8*8") %>  
+  
   </p>
   <p>
-    <b>Body:</b>
-    <%= comment.body %>
+    <%=comment.body %>
   </p>
 
 <%= link_to 'Edit', edit_article_comment_path(@article, comment) %> |
