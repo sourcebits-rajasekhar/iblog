@@ -5,5 +5,5 @@ class Article < ActiveRecord::Base
  validates_uniqueness_of :title 
  
  has_many :comments , :dependent => :destroy
- 
+ serialize :body
 end

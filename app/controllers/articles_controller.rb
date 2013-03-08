@@ -1,7 +1,9 @@
 class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
+  require 'net/http'
   def index
+    
     @articles = Article.all
 
     respond_to do |format|

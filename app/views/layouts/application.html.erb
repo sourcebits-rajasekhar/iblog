@@ -2,15 +2,15 @@
 <html>
 <head>
   <title>Iblog</title>
-  <%= stylesheet_link_tag 'scaffold' %>
- <%= stylesheet_link_tag 'screen', :media => 'screen' %>
- <%= stylesheet_link_tag 'print',  :media => 'print' %>
+<%= tinymce_assets %>
+ <script type="text/javascript" src="/assets/tinymce.js">
+ <%= stylesheet_link_tag 'stylesettings', :media => 'screen' %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <div class= "container">
-  <div class="span-17 colborder" id="content">
+  <div class="posts" id="content">
     <%= yield %>
   </div>
   <div class="span-4 last" id="sidebar"></div>
