@@ -1,7 +1,7 @@
-<p>
-  <h1><%= article.title %></h1>
-</p>
-<%= article.body.html_safe %>
-
-
-<%= link_to 'Show', article %>
+<div class="article">
+  <h1 id='title'><%= article.title %></h1>
+  <p class='postmetadata'>created by admin at <%=article.created_at.to_s %></p>
+  <div id="body"><%= article.body.html_safe %></div>
+   <%articlepath="/articles/"+article.id.to_s%>
+  <a id="showlink" href="<%=articlepath%>">showarticle</a> <!-- see newarticle link for other way of doing it -->
+</div>

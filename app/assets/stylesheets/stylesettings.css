@@ -1,21 +1,170 @@
 
 div {display:block;}
 
+body 
+{
+  background-image:url('http://hdwallpapers2013.com/wp-content/uploads/2012/11/City-wallpaper-at-night.jpg');
+}
 .container 
 {
 	width:950px;
 	margin:0 auto;
+	background-color: white;
 }
-.posts 
+.posts
 {
 	width:950px;
-	margin:0 auto;
+	margin:10px auto 0 10px;
+	float:left;
+	background-color: white;
 }
 
-.articlebody
-{
-	
+.article
+{   
+	width:900px;
+	margin:10px 25px 10px 25px;
+	overflow:hidden;
+	background-color: white;
 }
 .field
 {   
 }
+.allpostsheading
+{   
+	display:block;
+	background-color:rgb(255,122,0);
+	height:200px;
+}
+.allblogs
+{
+	color:white;
+    position:relative;
+	font-size: 4em;
+	top:70px;
+	left:100px;
+	font-family: Marker Felt,sans-serif;
+    display:block;
+}
+
+#title
+{
+	color: rgb(0,0,0);
+	font-size:2em;
+	position: relative;
+	margin:10px 10px 10px 5px;
+	font-family: Marker Felt,sans-serif;
+}
+#title:hover {
+	color:rgb(255,122,0);
+}
+#body
+{
+	display:block;
+	text-indent: 50px;
+	text-align: justify;
+    overflow:hidden;
+    margin:10px 10px 10px 10px;
+   font-family: Arial, Verdana, sans-serif;
+   font-size:14px;
+}
+#showlink
+{
+margin:10px auto;
+display: inline-block;
+padding: 5px 10px 6px;
+color: rgb(255,122,0);
+text-decoration: none;
+font-weight: bold;
+line-height: 1;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+-moz-box-shadow: 1px 1px 1px black;
+-webkit-box-shadow: 1px 1px 1px black;
+border-bottom: 1px solid black;
+position: relative;
+cursor: pointer;
+}
+
+.newarticle
+{
+margin:10px 10px 10px 0;
+float :right;
+display: inline-block;
+padding: 5px 10px 6px;
+color: rgb(255,122,0);
+text-decoration: none;
+font-weight: bold;
+line-height: 1;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+-moz-box-shadow: 1px 1px 1px black;
+-webkit-box-shadow: 1px 1px 1px black;
+border-bottom: 1px solid black;
+position: relative;
+cursor: pointer;
+}
+.postmetadata{
+	color:#706C6E;
+	font-weight: lighter;
+	text-transform: lowercase;
+	font-style: italic;
+	margin:5px 0 5px 10px;
+}
+/*nav{
+display:block;	
+margin: 0;
+padding: 0;
+list-style-type: none;
+position:relative;
+top:5em;
+left:40px;
+
+}*/
+	
+nav ul#firstlist {
+	display:inline-block;
+	background: #ffffff; 
+	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+	box-shadow: 2px 2px 9px rgba(0,0,0,0.15);
+	padding: 0;  
+	list-style: circle;	
+	position: relative;	
+	max-height: 2em;
+	top:4em;
+	left:6em;
+	line-height:2;
+	cursor:pointer;
+    border-radius: 5px;
+}
+nav ul ul {display:none;}
+nav ul li:hover > ul{ display:block; 
+	                  cursor:pointer; 
+	                  margin:0; padding:0; 
+	                  position:relative; top:0; left:0; 
+	                  width:95px; 
+	                  background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+	                  background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+				      background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%);	
+	                  border-radius: 2px ;
+	                  z-index:4;
+	                  text-align: center;
+	               }
+nav ul li:hover > ul li {
+        float:none; 
+		border-bottom: 1px solid #4b545f;	
+		position: relative;
+		display:block;
+		cursor:pointer;
+		 }
+
+nav ul li:hover {
+		background: #4b545f;	
+		background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+		background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+		background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
+	}
+
+nav ul li { display: inline; float:left; margin:0; width:95px;  text-align: center; }
+

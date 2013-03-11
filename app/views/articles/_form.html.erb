@@ -18,7 +18,16 @@
   </div>
   <div class="field">
     <%= f.label :body %><br />
-    <%= f.text_area :body ,:class => "tinymce" ,:rows => 40, :cols => 120 %>
+   <%= f.text_area :body ,:class => "tinymce" ,:rows => 40, :cols => 120 %>
+   <script type="text/javascript">
+      tinyMCE.init({
+        mode: 'textareas',
+        theme: 'advanced',
+        theme_advanced_disable: "code"
+
+      });
+    </script>
+
   </div>
   <div class="actions">
     <%= f.submit %>

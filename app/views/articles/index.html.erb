@@ -1,7 +1,31 @@
-
-<h1>All Blog Posts</h1>
+<div class='allpostsheading'>
+<span class="allblogs">Iblog</span>
+<nav>
+ <ul id='firstlist'>
+ 	<li>Home
+       <ul>
+         <li>link1</li>
+         <li>link2</li>
+         <li>link3</li>
+       </ul> 
+     </li>  
+  	<li>Portfolio
+        <ul>
+         <li>link4</li>
+         <li>link5</li>
+         <li>link6</li>
+        </ul>
+     </li>   
+ 	<li>BlogPosts</li>
+ 	<li>About</li>
+ 	<li>Contact</li>
+ 	<li>Recent</li>
+ 	<li>Research</li>
+ 	<li>About me</li>
+ </ul>	
+</nav>	
+</div>
 <%= render @articles %>
 <br />
-<%= link_to 'New Article', new_article_path %>
-
+<%= link_to 'New Article', new_article_path, { :class => 'newarticle' }%>
 

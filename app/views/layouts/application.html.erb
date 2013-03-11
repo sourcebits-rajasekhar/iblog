@@ -2,11 +2,13 @@
 <html>
 <head>
   <title>Iblog</title>
-<%= tinymce_assets %>
- <script type="text/javascript" src="/assets/tinymce.js">
- <%= stylesheet_link_tag 'stylesettings', :media => 'screen' %>
+
+ <%= stylesheet_link_tag "stylesettings" ,:media =>"screen"%>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+   <%= tinymce_assets %>
+  <script type="text/javascript" src="/assets/tinymce.js">
+  </script>
 </head>
 <body>
 <div class= "container">
