@@ -3,7 +3,7 @@ div {display:block;}
 
 body 
 {
-  background-image:url('http://hdwallpapers2013.com/wp-content/uploads/2012/11/City-wallpaper-at-night.jpg');
+  background-image:url('http://indervilla.com/home/Texture-Background-Stone-HD.jpg');
 }
 .container 
 {
@@ -14,10 +14,12 @@ body
 .posts
 {
 	width:950px;
-	margin:10px auto 0 10px;
+	margin:10px 0 30px 10px;
 	float:left;
 	background-color: white;
-}
+	-moz-box-shadow: 1px 1px 15px orange;
+    -webkit-box-shadow: 1px 1px 15px orange;
+}	
 
 .article
 {   
@@ -137,6 +139,7 @@ nav ul#firstlist {
 	line-height:2;
 	cursor:pointer;
     border-radius: 5px;
+    font-family: Marker Felt,sans-serif;
 }
 nav ul ul {display:none;}
 nav ul li:hover > ul{ display:block; 
@@ -153,7 +156,7 @@ nav ul li:hover > ul{ display:block;
 	               }
 nav ul li:hover > ul li {
         float:none; 
-		border-bottom: 1px solid #4b545f;	
+		border-bottom: 1px solid #ffffff;	
 		position: relative;
 		display:block;
 		cursor:pointer;
@@ -168,3 +171,5 @@ nav ul li:hover {
 
 nav ul li { display: inline; float:left; margin:0; width:95px;  text-align: center; }
 
+nav ul ul li a { text-decoration: none; display:inline;}
+nav ul ul li a:visited{ color:red;}

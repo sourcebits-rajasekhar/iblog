@@ -2,9 +2,17 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   require 'net/http'
+  require 'oauth2'
   def index
     
-    @articles = Article.all
+    # api_client_obj = OAuth2::Client.new('1028167159482.apps.googleusercontent.com','DX91zikpNgET_mZA1cctablE', {:site => 'https://www.googleapis.com/'})
+    # api_access_token_obj = OAuth2::AccessToken.new(api_client_obj, 'ya29.AHES6ZS0mtz4QJhii8XQGyNZ0LepD1ep5dmKi_MrkW0Hcw')
+    # response=api_access_token_obj.post('/tracks/v1/geofences/create',{ :geofences =>[ { :name => "Inside" , :polygon => { :invert => false , :loops => [ { :vertices => [{:lat=> 45, :lng => -111 },
+    #                                      { :lat=> 45, :lng => -104 },{ :lat=> 41,:lng => -104 }, { :lat=> 41, :lng => -111 } ]}]} }]})
+
+    # puts response.to_s
+    
+    @articles = Article.order('created_at DESC').all
 
     respond_to do |format|
       format.html # index.html.erb

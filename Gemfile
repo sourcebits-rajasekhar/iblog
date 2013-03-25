@@ -22,6 +22,7 @@ gem 'rails-backup-migrate'
 gem 'tinymce-rails'
 gem 'jquery-rails'
 
+gem 'oauth2'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

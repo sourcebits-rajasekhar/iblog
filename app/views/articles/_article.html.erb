@@ -1,6 +1,17 @@
 <div class="article">
   <h1 id='title'><%= article.title %></h1>
   <p class='postmetadata'>created by admin at <%=article.created_at.to_s %></p>
+
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="rajachinthan">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+<a href="https://twitter.com/rajachinthan" class="twitter-follow-button" >Follow @rajachinthan</a>
+<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+
+ 
+
+
   <div id="body"><%= article.body.html_safe %></div>
    <%articlepath="/articles/"+article.id.to_s%>
   <a id="showlink" href="<%=articlepath%>">showarticle</a> <!-- see newarticle link for other way of doing it -->
